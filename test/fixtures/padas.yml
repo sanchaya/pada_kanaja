@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word: MyString
+  meaning: MyText
+  pos: MyText
+  language: one
+  meaning_language_id: 1
+  dictionary: one
+
+two:
+  word: MyString
+  meaning: MyText
+  pos: MyText
+  language: two
+  meaning_language_id: 1
+  dictionary: two
