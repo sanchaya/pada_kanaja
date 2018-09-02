@@ -4,14 +4,9 @@ class Pada < ApplicationRecord
 
 
   def self.search(word)
-    where("word like ?", "%#{word}%")	
+    # where("word like ?", "%#{word}%")	
+    includes(:dictionary).where(word: word)	
   end
 
 
-end
-
-
-class Kanajadb < ApplicationRecord
-	establish_connection(:pada_kanaja_db)
-	GV1 = "gv_kan_english"
 end
