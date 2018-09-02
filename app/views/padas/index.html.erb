@@ -7,7 +7,7 @@
   <hr />
   <div class="form-group main-search-field">
     <%= form_tag root_path, method: :get do %>
-    <%= search_field_tag "search" ,params[:search], autofocus: params[:search] ? false : true , class: 'form-control kan-ime', placeholder: "#{t(:huduku)}" %>
+    <%= search_field_tag "search" ,params[:search], autofocus: params[:search] ? false : true , class: 'form-control kan-ime search', placeholder: "#{t(:huduku)}" %>
     <% end %>
   </div>
   <hr />
@@ -15,30 +15,5 @@
 
 
 <% if @words && @words.count > 0 %>
-<div class="word-lists"> 
-  <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>  <%= t(:word)  %> </th>
-      <th>  <%= t(:meaning)  %> </th>
-      <th> <%= t(:dictionary) %> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @words.each do |word| %>
-    <tr>
-      <td>
-        <%= word.word %>
-      </td>
-      <td>
-        <%= word.meaning %>
-      </td>
-      <td>
-        <%= word.dictionary.name %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
+  <%= render "pada_meaning" %>
 <% end %>
