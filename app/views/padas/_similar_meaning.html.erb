@@ -1,11 +1,7 @@
 
-<div class="panel panel-default">
-	<div class="panel-body">
-		<ul>
-			<% @similar_meanings.each do |meaning| %>
-			<li> <%= link_to meaning.word, "#{root_path}?search=#{meaning.word}" %> 
-			</li>
-			<% end %>
-		</ul>
-	</div>
-</div>
+<ul>
+	<% @similar_meanings.each do |meaning| %>
+	<li> <%= link_to meaning.word, "#{root_path}?search=#{meaning.word}" %> 
+	</li>
+	<% end %>
+</ul>
