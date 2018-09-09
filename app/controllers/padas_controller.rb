@@ -4,7 +4,8 @@ class PadasController < ApplicationController
   # GET /padas
   # GET /padas.json
   def index
-    @words = Pada.search(params[:search])
+    @meanings = Pada.search(params[:search])
+    @similar_meanings = Pada.similar_search(params[:search]).exclude_word_ids(@meanings.pluck('id')).limit(10)
   end
 
   # GET /padas/1

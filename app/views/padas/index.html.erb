@@ -1,7 +1,7 @@
 <div class="main-search">
   <div class="intoduction-text">
     <p align="center">
-        <h2> <%= t(:pada_kanaja) %> </h2>
+      <h2> <%= t(:pada_kanaja) %> </h2>
     </p>
   </div>
   <hr />
@@ -13,7 +13,17 @@
   <hr />
 </div>
 
-
-<% if @words && @words.count > 0 %>
-  <%= render "pada_meaning" %>
-<% end %>
+<div class="meaning-section">
+  <div class="row">
+    <div class="col-md-8">
+      <% if @meanings && @meanings.count > 0 %>
+      <%= render "pada_meaning" %>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+        <% if @similar_meanings && @similar_meanings.count > 0 %>
+        <%= render "similar_meaning" %>
+        <% end %>
+      </div>
+  </div>
+</div>

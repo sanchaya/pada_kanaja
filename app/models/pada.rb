@@ -4,9 +4,15 @@ class Pada < ApplicationRecord
 
 
   def self.search(word)
-    # where("word like ?", "%#{word}%")	
     includes(:dictionary).where(word: word)	
   end
 
+  def self.similar_search(word)
+    where("word like ?", "%#{word}%")	
+  end
+
+  def self.exclude_word_ids(ids)
+  	where("id not in (?)", ids)
+  end
 
 end
