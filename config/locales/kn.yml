@@ -41,3 +41,7 @@ kn:
   publisher: 'ಪ್ರಕಾಶಕ'
   kannada: 'ಕನ್ನಡ'
   english: 'ಇಂಗ್ಲೀಷ್'
+
+  # Heading text
+  search_heading: 'ಕನ್ನಡ ನಿಘಂಟುಗಳ ಕಣಜ'
+  search_sub_heading: 'ಕನ್ನಡದ ಪದಗಳ ಅರ್ಥ, ಬಳಕೆ, ಇತ್ಯಾದಿಗಳ ಹುಡುಕಿಗೆ ಮೊದಲಾಗಿ'

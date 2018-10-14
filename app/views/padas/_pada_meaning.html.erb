@@ -1,8 +1,8 @@
- <h2> <%= @meanings.first.word %> </h2> 
- <% @meanings.each do |meaning| %>
- <p> <%= meaning.meaning %> -
-  <span class="label label-default"> <%= meaning.dictionary.name %></span>
-</p>
-<hr />
-<% end %>
-
+ <h4>  <i> '<%= @meanings.first.word %>' </i>  ಪದದ ಅರ್ಥ</h4>
+<div class="main-meaning-section">
+   <% @meanings.each do |meaning| %>
+   <p> <span class="word-meaning"> <%= meaning.meaning %> </span> </p>
+   <p> <span class="word-description"> <%= meaning.pos %> </span> </p>
+  <!-- <hr /> -->
+  <% end %>
+</div>

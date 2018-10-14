@@ -32,7 +32,21 @@ task :import_gv2 => :environment do
 
 end
 
+task :import_nkvt => :environment do
+  Kanajadb.table_name = Kanajadb::NKVT_PA
+  dictionary = Dictionary.find_or_create_by(name: Kanajadb::NKVT_PA)
+  kan_lan = Language.find_or_create_by(name: "kannada", lan_code: "kn")
+  eng_lan = Language.find_or_create_by(name: "english", lan_code: "en")
+  table_data = Kanajadb.all
 
+  puts "started"
+  table_data.each do |data|
+    puts data.inspect
+    Pada.create(word: data.word, meaning: data.description, pos: data.meaning, dictionary_id: dictionary.id, language_id: kan_lan.id, meaning_language_id: eng_lan.id)
+  end
+  puts "ended"
+
+end
 
 task :import_adalitha => :environment do
   Kanajadb.table_name = Kanajadb::ADALITHA_EN_KN

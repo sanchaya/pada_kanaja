@@ -4,7 +4,7 @@ class Pada < ApplicationRecord
 
 
   def self.search(word)
-    includes(:dictionary).where(word: word)	
+    includes(:dictionary).where(word: word)
   end
 
   def self.similar_search(word)

@@ -1,7 +1,7 @@
-
+<h4>ಇತರೆ ಅರ್ಥಗಳು</h4>
 <ul>
 	<% @similar_meanings.each do |meaning| %>
-	<li> <%= link_to meaning.word, "#{root_path}?search=#{meaning.word}" %> 
+	<li> <%= link_to meaning.word, "#{root_path}?search=#{meaning.word}" %>
 	</li>
 	<% end %>
 </ul>

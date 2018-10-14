@@ -19,7 +19,7 @@
  @import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
 
  body {
- 	background: image-url("bg-pattern.png") repeat scroll 0 0 transparent;
+ 	// background: image-url("bg-pattern.png") repeat scroll 0 0 transparent;
  }
 
  body, p, ol, ul, td {
@@ -39,14 +39,14 @@
 /* 	border: 1px solid #e5e5e5; */
  	text-align: center;
 /* 	padding: 0.5em; */
- 	cursor: default; 
+ 	cursor: default;
  }
 
  .apple_pagination a, .apple_pagination span {
- 	padding: 0.2em 0.3em; 
+ 	padding: 0.2em 0.3em;
  }
  .apple_pagination .disabled {
- 	color: #aaaaaa; 
+ 	color: #aaaaaa;
  }
  .apple_pagination .current {
  	font-style: normal;
@@ -59,26 +59,26 @@
  	-moz-border-radius: 1em;
  	-webkit-border-radius: 1em;
  	border-radius: 1em;
- 	text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; 
+ 	text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
  }
  .apple_pagination a {
  	text-decoration: none;
- 	color: black; 
+ 	color: black;
  }
  .apple_pagination a:hover, .apple_pagination a:focus {
- 	text-decoration: underline; 
+ 	text-decoration: underline;
  }
 
  .pagination{
  	margin: 0px;
  }
- 
+
  /*Style afor apple style pagintaion from slamies ended*/
 
 
  /*Style for footer */
 
- 
+
 
  /*Footer ended*/
 
@@ -138,7 +138,7 @@
 
  .main-page-header input[type="search"] {
  	height: 35px;
- 	width: 40%;	
+ 	width: 40%;
  }
 
  /*Introduction to samooha on landing page text*/
@@ -153,7 +153,7 @@
  }
 
  .main-search-field {
- 	width: 50%; 
+ 	width: 50%;
  	margin: auto;
  }
 
