@@ -15,5 +15,15 @@
 //= require jquery_ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery.ime
+//= require jquery.ime.selector
+//= require jquery.ime.preferences
+//= require jquery.ime.inputmethods
 //= require twitter/bootstrap
 //= require_tree .
+
+
+$(document).ready( function () {
+	// Kannada ime enabled for form 
+	$('.kan-ime').ime();
+});

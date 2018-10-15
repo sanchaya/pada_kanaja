@@ -1,8 +1,13 @@
- <h4>  <i> '<%= @meanings.first.word %>' </i>  ಪದದ ಅರ್ಥ</h4>
 <div class="main-meaning-section">
-   <% @meanings.each do |meaning| %>
-   <p> <span class="word-meaning"> <%= meaning.meaning %> </span> </p>
-   <p> <span class="word-description"> <%= meaning.pos %> </span> </p>
-  <!-- <hr /> -->
-  <% end %>
+   <% if @meanings.count > 0 %>
+     <h4>  <i> '<%= @meanings.first.word %>' </i>  ಪದದ ಅರ್ಥ</h4>
+
+	 <% @meanings.each do |meaning| %>
+	   <p> <span class="word-meaning"> <%= meaning.meaning %> </span> </p>
+       <p> <span class="word-description"> <%= meaning.pos %> </span> </p>
+	  <!-- <hr /> -->
+	  <% end %>
+	<% else %>
+	  <p> <span class="word-description"> ಯಾವುದೆ ಅರ್ಥ ದೊರೆತಿಲ್ಲ </span> </p>
+    <% end %>
 </div>
