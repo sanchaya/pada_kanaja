@@ -1,3 +1,5 @@
+require 'csv'
+
 desc "Import from Kanada tables to project"
 task :import_gv1 => :environment do
   Kanajadb.table_name = Kanajadb::GV_KN_EN
@@ -62,4 +64,20 @@ task :import_adalitha => :environment do
   end
   puts "ended"
 
+end
+
+
+
+desc "Import from csv"
+task :import_gv_eng_kan_csv => :environment do
+  file_name = Rails.root.to_s + '/lib/gv_eng_kannada.csv'
+  puts 'started importing'
+
+  dictionary = Dictionary.find_or_create_by(name: Kanajadb::GV_EN_KN)
+  kan_lan = Language.find_or_create_by(name: "kannada", lan_code: "kn")
+  eng_lan = Language.find_or_create_by(name: "english", lan_code: "en")
+
+  CSV.foreach(file_name, :col_sep => ',', :headers => true) do |row|
+     Pada.create(word: row[0], meaning: row[2], dictionary_id: dictionary.id, pos: row[1], language_id: eng_lan.id, meaning_language_id: kan_lan.id)
+  end
 end
